@@ -7,12 +7,12 @@
 Summary:	%{_pearname} - automatically build HTML_QuickForm object from a DB_DataObject derived class
 Summary(pl):	%{_pearname} - automatyczne budowanie obiektu HTML_QuickForm pochodz±cego z DB_DataObject
 Name:		php-pear-%{_pearname}
-Version:	0.10.0
+Version:	0.10.2
 Release:	1
 License:	PHP 2.02
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	b65cc7863ac66dfb93f0b56f3f82fea5
+# Source0-md5:	558b4ff8b68b963b7a3b768f53aecb93
 URL:		http://pear.php.net/package/DB_DataObject_FormBuilder/
 BuildRequires:	rpm-php-pearprov >= 4.0.2-98
 Requires:	php-pear
