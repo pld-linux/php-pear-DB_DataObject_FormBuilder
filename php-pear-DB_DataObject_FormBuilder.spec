@@ -37,7 +37,7 @@ your derived classes, that you can use to fine-tune the form generation,
 gradually turning the prototypes into fully features forms and you can
 take control of any stage at the process.
 
-This class has in PEAR status: %{_status}.
+In PEAR status of this package is: %{_status}.
 
 %description -l pl
 %{_pearname} pomaga w budowaniu aplikacji opartych na klasach
