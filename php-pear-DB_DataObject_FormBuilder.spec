@@ -7,7 +7,7 @@
 %define		_rc	RC5
 %define		_rel 1
 Summary:	%{_pearname} - automatically build HTML_QuickForm object from a DB_DataObject derived class
-Summary(pl):	%{_pearname} - automatyczne budowanie obiektu HTML_QuickForm pochodz±cego z DB_DataObject
+Summary(pl.UTF-8):   %{_pearname} - automatyczne budowanie obiektu HTML_QuickForm pochodzÄ…cego z DB_DataObject
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
 Release:	2.%{_rc}.%{_rel}
@@ -48,22 +48,22 @@ take control of any stage at the process.
 
 In PEAR status of this package is: %{_status}.
 
-%description -l pl
+%description -l pl.UTF-8
 %{_pearname} pomaga w budowaniu aplikacji opartych na klasach
 DB_DataObject oraz HTML_QuickForm. W celu uzyskania szybkiego, lecz
-dzia³aj±cego prototypu aplikacji, wystarczy stworzyæ model bazy,
-uruchomiæ skrypt CreateTable i zapisaæ skrypt przekazuj±cy jeden ze
-zwróconych obiektów do klasy FormBuilder. Klasa ta automatycznie
-wygeneruje prosty lecz dzia³aj±cy obiekt HTML_QuickForm, który mo¿na
-u¿yæ do przetestowania aplikacji. Dostarcza tak¿e metod automatycznie
-wykrywaj±cych czy komenda insert() lub update() musi byæ wykonana
-przed wys³aniem formularza. Je¶li plik links.ini zosta³ poprawnie
+dziaÅ‚ajÄ…cego prototypu aplikacji, wystarczy stworzyÄ‡ model bazy,
+uruchomiÄ‡ skrypt CreateTable i zapisaÄ‡ skrypt przekazujÄ…cy jeden ze
+zwrÃ³conych obiektÃ³w do klasy FormBuilder. Klasa ta automatycznie
+wygeneruje prosty lecz dziaÅ‚ajÄ…cy obiekt HTML_QuickForm, ktÃ³ry moÅ¼na
+uÅ¼yÄ‡ do przetestowania aplikacji. Dostarcza takÅ¼e metod automatycznie
+wykrywajÄ…cych czy komenda insert() lub update() musi byÄ‡ wykonana
+przed wysÅ‚aniem formularza. JeÅ›li plik links.ini zostaÅ‚ poprawnie
 skonfigurowany, DataObject automatycznie wykryje czy pole tabeli jest
 kluczem obcym i rozpropaguje element formularza typu selectbox z
-polami po³±czonej tabeli. Istnieje tak¿e wiele dodatkowych parametrów,
-które mo¿na umie¶ciæ w pliku DataObjects.ini lub przekazaæ jako
-parametr do klasy pochodnej, dziêki którym mo¿na usprawniæ generowanie
-formularza, stopniowo przekszta³caj±c prototypy w pe³ni konfigurowalne
+polami poÅ‚Ä…czonej tabeli. Istnieje takÅ¼e wiele dodatkowych parametrÃ³w,
+ktÃ³re moÅ¼na umieÅ›ciÄ‡ w pliku DataObjects.ini lub przekazaÄ‡ jako
+parametr do klasy pochodnej, dziÄ™ki ktÃ³rym moÅ¼na usprawniÄ‡ generowanie
+formularza, stopniowo przeksztaÅ‚cajÄ…c prototypy w peÅ‚ni konfigurowalne
 formularze.
 
 Ta klasa ma w PEAR status: %{_status}.
