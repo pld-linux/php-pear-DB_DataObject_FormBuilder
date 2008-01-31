@@ -5,7 +5,7 @@
 %define		_pearname	%{_class}_%{_subclass}
 
 %define		_rc	RC5
-%define		_rel 1
+%define		_rel 2
 Summary:	%{_pearname} - automatically build HTML_QuickForm object from a DB_DataObject derived class
 Summary(pl.UTF-8):	%{_pearname} - automatyczne budowanie obiektu HTML_QuickForm pochodzącego z DB_DataObject
 Name:		php-pear-%{_pearname}
