@@ -4,16 +4,16 @@
 %define		_status		beta
 %define		_pearname	%{_class}_%{_subclass}
 
-%define		_rc	RC5
-%define		_rel 2
+%define		subver	RC5
+%define		rel 3
 Summary:	%{_pearname} - automatically build HTML_QuickForm object from a DB_DataObject derived class
 Summary(pl.UTF-8):	%{_pearname} - automatyczne budowanie obiektu HTML_QuickForm pochodzącego z DB_DataObject
 Name:		php-pear-%{_pearname}
 Version:	1.0.0
-Release:	2.%{_rc}.%{_rel}
+Release:	2.%{subver}.%{rel}
 License:	PHP 3.0
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{_rc}.tgz
+Source0:	http://pear.php.net/get/%{_pearname}-%{version}%{subver}.tgz
 # Source0-md5:	0430207937449d635449389ae345854c
 URL:		http://pear.php.net/package/DB_DataObject_FormBuilder/
 BuildRequires:	php-pear-PEAR
@@ -22,6 +22,8 @@ BuildRequires:	rpmbuild(macros) >= 1.300
 Requires:	php-pear >= 4:1.0-8
 Requires:	php-pear-DB_DataObject
 Requires:	php-pear-HTML_QuickForm >= 3.2.4
+Suggests:	php-pear-Date
+Suggests:	php-pear-HTML_Table
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -30,8 +32,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 %{_pearname} will aid you in rapid application development using the
-packages DB_DataObject and HTML_QuickForm. For having quick but working
-prototype of your application, simply model the database, run
+packages DB_DataObject and HTML_QuickForm. For having quick but
+working prototype of your application, simply model the database, run
 DataObject`s CreateTable script over it and write a script that passes
 one of the resulting objects to the FormBuilder class. The FormBuilder
 class will automatically generate a simple but working HTML_QuickForm
@@ -39,12 +41,12 @@ object that you can use to test your application. It also provides a
 processing method that will automatically detect if an insert() or
 update() command has to be executed after the form has been submitted.
 If you have set DataObject`s links.ini file correctly, it will also
-automatically detect if a table field is a foreign key and will populate
-a selectbox with the linked table`s entry. There are many optional
-parameteres that you can place in DataObjects.ini or in properties of
-your derived classes, that you can use to fine-tune the form generation,
-gradually turning the prototypes into fully features forms and you can
-take control of any stage at the process.
+automatically detect if a table field is a foreign key and will
+populate a selectbox with the linked table`s entry. There are many
+optional parameteres that you can place in DataObjects.ini or in
+properties of your derived classes, that you can use to fine-tune the
+form generation, gradually turning the prototypes into fully features
+forms and you can take control of any stage at the process.
 
 In PEAR status of this package is: %{_status}.
 
