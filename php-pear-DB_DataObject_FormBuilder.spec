@@ -1,19 +1,19 @@
+%define		status		stable
+%define		pearname	DB_DataObject_FormBuilder
 %include	/usr/lib/rpm/macros.php
-%define		_status		stable
-%define		_pearname	DB_DataObject_FormBuilder
-Summary:	%{_pearname} - automatically build HTML_QuickForm object from a DB_DataObject derived class
-Summary(pl.UTF-8):	%{_pearname} - automatyczne budowanie obiektu HTML_QuickForm pochodzącego z DB_DataObject
-Name:		php-pear-%{_pearname}
-Version:	1.0.1
+Summary:	%{pearname} - automatically build HTML_QuickForm object from a DB_DataObject derived class
+Summary(pl.UTF-8):	%{pearname} - automatyczne budowanie obiektu HTML_QuickForm pochodzącego z DB_DataObject
+Name:		php-pear-%{pearname}
+Version:	1.0.2
 Release:	1
 License:	PHP 3.0
 Group:		Development/Languages/PHP
-Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	3083ac45329c7c6d14877d00f8da2020
+Source0:	http://pear.php.net/get/%{pearname}-%{version}.tgz
+# Source0-md5:	fb2342e02b93284e457eafd1315a1ff5
 URL:		http://pear.php.net/package/DB_DataObject_FormBuilder/
 BuildRequires:	php-pear-PEAR >= 1:1.4.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
-BuildRequires:	rpmbuild(macros) >= 1.300
+BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-pear >= 4:1.0-8
 Requires:	php-pear-DB_DataObject >= 1.8.5
 Requires:	php-pear-HTML_QuickForm >= 3.2.4
@@ -45,7 +45,7 @@ classes, that you can use to fine-tune the form generation, gradually
 turning the prototypes into fully features forms and you can take
 control of any stage at the process.
 
-In PEAR status of this package is: %{_status}.
+In PEAR status of this package is: %{status}.
 
 %description -l pl.UTF-8
 DB_DataObject_FormBuilder pomaga w budowaniu aplikacji opartych na
@@ -65,7 +65,7 @@ parametr do klasy pochodnej, dzięki którym można usprawnić generowanie
 formularza, stopniowo przekształcając prototypy w pełni konfigurowalne
 formularze.
 
-Ta klasa ma w PEAR status: %{_status}.
+Ta klasa ma w PEAR status: %{status}.
 
 %prep
 %pear_package_setup
@@ -73,7 +73,8 @@ Ta klasa ma w PEAR status: %{_status}.
 # packaging tools
 rm .%{php_pear_dir}/data/DB_DataObject_FormBuilder/tools/fix0.9.0Files.php
 rm .%{php_pear_dir}/data/DB_DataObject_FormBuilder/tools/fixPre1.52CVSFiles.php
-rm .%{php_pear_dir}/package.php
+
+mv .%{php_pear_dir}/data/DB_DataObject_FormBuilder/README .
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -91,6 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc install.log optional-packages.txt
+%doc README
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/DB/DataObject/FormBuilder.php
 %{php_pear_dir}/DB/DataObject/FormBuilder
