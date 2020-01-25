@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	DB_DataObject_FormBuilder
-%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - automatically build HTML_QuickForm object from a DB_DataObject derived class
 Summary(pl.UTF-8):	%{pearname} - automatyczne budowanie obiektu HTML_QuickForm pochodzącego z DB_DataObject
 Name:		php-pear-%{pearname}
